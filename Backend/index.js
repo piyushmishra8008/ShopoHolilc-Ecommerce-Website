@@ -11,11 +11,10 @@ const userroutes = require('./routes/authroutes');
 
 app.use(express.json());
 
+const cors = require('cors');
+
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    process.env.FRONTEND_URL
-  ],
+  origin: true,
   credentials: true
 }));
 
@@ -30,7 +29,9 @@ app.use('/api/analytics', require('./routes/analyticsroutes'));
 app.get('/', (req, res) => {
   res.send('API WORKING');
 });
-
+app.get('/cors-test', (req, res) => {
+  res.json({ message: 'new deployment active' });
+});
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
