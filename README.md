@@ -34,7 +34,7 @@ RAZORPAY_KEY_ID=your_key_id
 RAZORPAY_KEY_SECRET=your_key_secret
 ```
 
-From the **root folder** `shopnest/`, trigger a full install across environments:
+From the **root folder** `shopoHolic/`, trigger a full install across environments:
 ```bash
 npm run build
 ```
